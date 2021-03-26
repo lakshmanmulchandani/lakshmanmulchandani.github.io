@@ -1,0 +1,89 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,600;1,600&display=swap');
+
+
+*{
+  padding=0;
+  margin=0;
+  box-sizing: border-box;
+}
+
+html{
+  font-size: 10px;
+  font-family: 'Montserrat',sans-serif;
+}
+/* TO REMOVE UNDERLINE FROM BUTTON */
+a{
+  text-decoration: none;
+}
+
+.container{
+min-height: 100vh;
+min-width: 100vh;
+width:100%;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+/* Hero section */
+
+#hero{
+  background-image: url(https://josephexec.com/wp-content/uploads/2015/04/cropped-joseph_web_banners_12.jpg);
+
+/* background-size: contain ensures that the entire background image will fit the background area, keeping its original aspect ratio. ...
+ background-size:
+cover makes the background image as large as possible such that it will fill the entire background area leaving no gaps.Jan 14, 2015 */
+
+  background-size: cover;
+  background-position:  top-center;
+  position: relative;
+
+  z-index: 1;
+}
+
+#hero::after{
+  content: normal;
+  position: absolute;
+  left: 0;
+  right:0;
+  height: 100%;
+  width:100%;
+  background-color: black;
+  /* opacity: .7; */
+  z-index: -1;
+
+}
+
+#hero h1{
+  width: fit-content;
+  font-size: 4vh;
+  display: block;
+  position: relative;
+  color: black;
+  padding-bottom: 10px;
+}
+
+
+
+
+
+#hero #cta{
+  display: inline-block;
+  padding: 20 px 40px;
+  color: crimson;
+  border: 2px solid crimson;
+  font-size: 2 vh;
+  text-transform: uppercase;
+  letter-spacing: .1vh;
+  margin-top: 30px;
+  transition: .3s ease background-color;
+  align-self: center;
+}
+
+#hero .cta:hover{
+  color: white;
+  background-color: crimson;
+}
+
+/* Ending hero section */
